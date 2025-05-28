@@ -1,0 +1,11 @@
+.listItem {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+.buttonWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

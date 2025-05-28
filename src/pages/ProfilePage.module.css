@@ -1,0 +1,6 @@
+.wrapStyle {
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    display: flex;
+}

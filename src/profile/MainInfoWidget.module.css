@@ -1,0 +1,56 @@
+.userInfoWrap {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+
+.avatarWrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.avatarIntupStyle {
+    border: 0;
+    opacity: 0;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+
+    position: absolute;
+
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.infoWrap {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+
+.settingsWrap {
+    height: 30%;
+    box-sizing: border-box;
+    padding: 5px 15px;
+}
+
+.infoBox {
+    border-radius: 10px;
+    height: 100%;
+    background: white;
+    box-sizing: border-box;
+    padding: 1px;
+}
+
+.horizontalBlock {
+        height: 30%;
+        margin-top: 15px;
+}
