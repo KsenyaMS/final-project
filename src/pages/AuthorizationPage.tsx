@@ -17,7 +17,7 @@ export const AuthorizationPage = () => {
     const { user, handleChangeUserInfo } = useUserInfo();
 
     const handleYandexButtonClick = () => {
-        window.open('https://oauth.yandex.ru/authorize?response_type=token&client_id=77a6d89064854211b3e199cdc96737b6', 'new_window')
+        window.open('https://oauth.yandex.ru/authorize?response_type=token&client_id=75e745ab21f94ec1b7fe52e8a99a6446', 'new_window')
     }
 
     const handleAuthorizationButtonClick = (params: User) => {
