@@ -41,7 +41,7 @@ export const ProfilePage = () => {
 
     const getUserInfo = async (token: string) => {
         try {
-            const response = await fetch(`https://login.yandex.ru/info?format=json&jwt_secret=eef6b18eafbb4c6a9c03cbcf14d610f1`, {
+            const response = await fetch(`https://login.yandex.ru/info?format=json&jwt_secret=6005c77f29d544328f8a5077f79aef25`, {
                 // mode: 'no-cors',
                 method: "GET",
                 headers: {
