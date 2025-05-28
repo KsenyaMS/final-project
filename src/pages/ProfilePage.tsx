@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { UserType, useUserInfo } from '../../providers/AuthorizationProvider';
 import { Text, Skeleton } from '@mantine/core';
 import { UserInfo, useUserList } from '../../providers/UserListProvider';
@@ -25,6 +25,7 @@ export type YandexInfo = {
 export const ProfilePage = () => {
     const navigate = useNavigate();
     const { enqueueSnackbar } = useSnackbar();
+    const { token = '' } = useParams();
 
     const { userList, handleChangeUserList } = useUserList();
     const { user, handleChangeUserInfo } = useUserInfo();
@@ -33,11 +34,6 @@ export const ProfilePage = () => {
     const [userDetails, setUserDetails] = useState<DetailUserInfo & UserInfo>();
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [error, setError] = useState<string>('');
-
-    const url = window.location.hash.split('&');
-    const token = url
-        .find(item => item.includes('access_token'))
-        ?.replace('#access_token=', '');
 
     const getUserInfo = async (token: string) => {
         try {
@@ -92,21 +88,17 @@ export const ProfilePage = () => {
     }
 
     useEffect(() => {
-        if (user.userType === UserType.User)
+        if (!token)
             return;
 
-        if (!token && user.userType === UserType.Guest) {
+        getUserInfo(token)
+    }, [token])
+
+    useEffect(() => {
+        if (user.userType !== UserType.User || !user.id) {
             navigate('/login');
             return;
         }
-
-        getUserInfo(token);
-    }, [token, getUserInfo, navigate, user.userType])
-
-    useEffect(() => {
-        if (user.userType !== UserType.User || !user.id)
-            return;
-
         getDetails(user.id);
     }, [user])
 

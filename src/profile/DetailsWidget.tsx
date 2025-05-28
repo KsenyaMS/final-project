@@ -217,9 +217,9 @@ export const DetailsWidget = ({ details, userId }: DetailsWidgetProps) => {
                     <XAxis dataKey="name" />
                     <Tooltip />
                     <CartesianGrid stroke="#f5f5f5" />
-                    <Line type="monotone" dataKey={statisticInfo?.keys[0]} stroke="blue" yAxisId={0} />
-                    <Line type="monotone" dataKey={statisticInfo?.keys[1]} stroke="red" yAxisId={1} />
-                    <Line type="monotone" dataKey={statisticInfo?.keys[2]} stroke="green" yAxisId={2} />
+                    <Line type="monotone" dataKey={statisticInfo?.keys[0]} stroke={mantineTheme.colors.blue[5]} yAxisId={0} />
+                    <Line type="monotone" dataKey={statisticInfo?.keys[1]} stroke={mantineTheme.colors.red[5]} yAxisId={1} />
+                    <Line type="monotone" dataKey={statisticInfo?.keys[2]} stroke={mantineTheme.colors.green[5]} yAxisId={2} />
                 </LineChart>
             </Card>
             {details.balance &&
