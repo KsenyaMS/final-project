@@ -209,11 +209,11 @@ export const DetailsWidget = ({ details, userId }: DetailsWidgetProps) => {
                     </Button>
                 </div>
             </Card>
-            <Card cardStyle={{ ...css.buttonCard, height: '400px', padding: '30px 15px 15px 15px' }}>
+            <Card cardStyle={{ ...css.buttonCard, height: '350px', padding: '30px 15px 15px 15px' }}>
                 <Text style={{ ...css.boldText, marginBottom: '15px' }}>
                     Статистика трат за 3 месяца
                 </Text>
-                <LineChart width={1150} height={300} data={statisticInfo?.statistic}>
+                <LineChart width={1000} height={300} data={statisticInfo?.statistic}>
                     <XAxis dataKey="name" />
                     <Tooltip />
                     <CartesianGrid stroke="#f5f5f5" />

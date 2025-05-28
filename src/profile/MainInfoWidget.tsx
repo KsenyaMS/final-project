@@ -99,6 +99,7 @@ export const MainInfoWidget = ({ details, yandexInfo }: MainInfoWidgetProps) => 
         <Card
             cardStyle={{
                 width: '30%',
+                minWidth: '400px',
                 height: '80vh',
             }}
         >

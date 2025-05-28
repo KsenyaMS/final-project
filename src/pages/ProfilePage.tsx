@@ -120,6 +120,7 @@ export const ProfilePage = () => {
                     />
                     <DetailsWidget
                         details={userDetails}
+                        userId={userDetails.id}
                     />
                 </>
             }
